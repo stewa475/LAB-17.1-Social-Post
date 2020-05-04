@@ -1,0 +1,3 @@
+<h1>A post far far away...</h1>
+<app-post-form (submitted)="onSubmit($event)"></app-post-form>
+<app-post *ngFor="let post of posts" [post]="post" (deleted)="onDelete($event)"></app-post>
