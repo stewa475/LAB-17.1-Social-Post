@@ -14,15 +14,15 @@ export class SocialPostsComponent implements OnInit {
   }
 
   posts: Post[] = [
-    {title: "Post 1", thought:"This is the body of post 1"},
-    {title: "Post 2", thought:"This is the body of post 2"}
+    { title: "Post 1", thought: "This is the body of post 1" },
+    { title: "Post 2", thought: "This is the body of post 2" }
   ]
 
-  onSubmit(post:Post) {
+  onSubmit(post: Post) {
     this.posts.push(post);
   }
 
-  onDelete(post:Post) {
-    this.posts = this.posts.filter( p => p != post);
+  onDelete(post: Post) {
+    this.posts.splice(this.posts.indexOf(post), 1);
   }
 }
